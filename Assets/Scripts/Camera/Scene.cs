@@ -6,19 +6,16 @@ using UnityEngine.SceneManagement;
 public class Scene : MonoBehaviour
 {
     public string sceneName;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     public void SceneChange(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void MoveToMain()
+    {
+        Destroy(GameObject.Find("Mary"));
+      // Destroy(GameObject.Find("Main Camera"));
+        SceneManager.LoadScene("MainMenu");
     }
 }

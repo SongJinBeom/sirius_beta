@@ -24,8 +24,10 @@ public class Scene1Manager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                showDialogue = true;
-                eventDialogueSystem.ShowDialogue();
+               
+                    showDialogue = true;
+                    eventDialogueSystem.ShowDialogue();
+                 
             }
         }
 
@@ -40,5 +42,12 @@ public class Scene1Manager : MonoBehaviour
                     scene.SceneChange(scene.sceneName);
             }
         }
+    }
+
+    public void introSkip()
+    {
+        //GameObject.Find("Dialogue Box").SetActive(false);
+        //GameObject.Find("Dialogue Panel").SetActive(false);
+        scene.SceneChange("MaryRoom");
     }
 }

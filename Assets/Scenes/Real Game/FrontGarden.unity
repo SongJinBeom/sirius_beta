@@ -447,7 +447,23 @@ PrefabInstance:
       propertyPath: characterBox
       value: 
       objectReference: {fileID: 1731837653}
-    m_RemovedComponents: []
+    - target: {fileID: 8013437081200219953, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437957459866376714, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480918356968597092, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6480918356968597092, guid: 746c28a2a8860d4459d15859c0d936f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 746c28a2a8860d4459d15859c0d936f9, type: 3}
 --- !u!1001 &755695668
 PrefabInstance:

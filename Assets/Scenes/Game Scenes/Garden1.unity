@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!61 &472606488 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5916488169955073941, guid: d650f91102bd20c43899ae5e22cde399,
+    type: 3}
+  m_PrefabInstance: {fileID: 5916488169561628682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1644706289
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +370,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8013437081200219953, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: characterBox
+      value: 
+      objectReference: {fileID: 1811585687}
+    - target: {fileID: 8437957459866376714, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437957459866376714, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: boundBox
+      value: 
+      objectReference: {fileID: 472606488}
+    - target: {fileID: 8437957459866376714, guid: 746c28a2a8860d4459d15859c0d936f9,
         type: 3}
       propertyPath: characterBox
       value: 

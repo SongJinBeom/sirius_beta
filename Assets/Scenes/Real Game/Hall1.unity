@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 98621236}
   - component: {fileID: 98621235}
   m_Layer: 0
-  m_Name: Door
+  m_Name: MaryRoomDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveScene: MaryRoom
-  movePos: {x: -14, y: -6.2, z: 0}
+  movePos: {x: 5, y: -6.2, z: 0}
 --- !u!61 &98621237
 BoxCollider2D:
   m_ObjectHideFlags: 0
