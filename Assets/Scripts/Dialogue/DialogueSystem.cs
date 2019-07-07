@@ -134,7 +134,7 @@ public class DialogueSystem : MonoBehaviour
             dialogueBox.GetComponent<RectTransform>().localPosition = txtNPC;
         }
         if ((int)dialogueData[count]["name"] == 3) // 마샤
-        {
+        { 
             txt.color = Color.blue;
             dialogueBox.GetComponent<RectTransform>().localPosition = txtNPC;
         }
