@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Item{
+    public string itemName;
+    public string itemCode;
+    
+
+}
+
 public class Inventory : MonoBehaviour
 {
     public Hashtable items = new Hashtable();
@@ -15,11 +22,6 @@ public class Inventory : MonoBehaviour
         if (collision.tag == "item")
         {
             items.Add(itemName, "1");
-            itemMent = GameObject.Find("ItemTalker");
-           
-
-            //Debug.Log(collision.name);
-            
             itemMent.GetComponent<itemExplanation>().showItemText(1, itemName);
             Destroy(GameObject.Find(itemName));
         }

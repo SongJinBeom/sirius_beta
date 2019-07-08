@@ -13,6 +13,7 @@ public class Controll : MonoBehaviour
 
     private Vector3 targetpos; // 마우스 좌표
     private bool moveit = false; // 이동 가능 여부
+    public bool menuON = true;
     private Vector3 minBound;
     private Vector3 maxBound;
 
@@ -81,22 +82,26 @@ public class Controll : MonoBehaviour
 
             moveit = true;
         }
-        if (moveit)
+
+        if (menuON)
         {
-            float dis = targetpos.x - transform.position.x; // 마우스 좌표 - 현재 캐릭터 좌표
-            if (Mathf.Abs(dis) <= error)
+            if (moveit)
             {
-                moveit = false;
-            }
-            if (dis > 0)
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                transform.Translate(Vector3.right * speed * Time.deltaTime);
-            }
-            else if (dis < 0)
-            {
-                transform.eulerAngles = new Vector3(0, 180, 0);
-                transform.Translate(Vector3.right * speed * Time.deltaTime);
+                float dis = targetpos.x - transform.position.x; // 마우스 좌표 - 현재 캐릭터 좌표
+                if (Mathf.Abs(dis) <= error)
+                {
+                    moveit = false;
+                }
+                if (dis > 0)
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    transform.Translate(Vector3.right * speed * Time.deltaTime);
+                }
+                else if (dis < 0)
+                {
+                    transform.eulerAngles = new Vector3(0, 180, 0);
+                    transform.Translate(Vector3.right * speed * Time.deltaTime);
+                }
             }
         }
     }

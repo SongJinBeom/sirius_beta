@@ -15,13 +15,7 @@ public class itemExplanation : MonoBehaviour
 
     public void showItemText(int GetorSet, string itemName)
     {
-
-        //if(!itemText)
-        //{
-        //    itemText.SetActive(true);
-        //}
         itemText = GameObject.Find("ItemTalker");
-
         itemCSV = CSVReader.Read(txtFile);
         txt = itemText.GetComponent<Text>();
 

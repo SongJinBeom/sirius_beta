@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     private GameObject Mary;
 
     private Image MenuPan;
-    private Controll MaryControl;
+ 
 
     private bool activiated;
 
@@ -23,14 +23,12 @@ public class Menu : MonoBehaviour
         MenuButton.SetActive(true);
 
         MenuBoard = GameObject.Find("Menu");
-        //MenuBoard = GameObject.Find("Menu_UI").gameObject;
         MenuBoard.SetActive(false);
 
         Mary = GameObject.FindGameObjectWithTag("Mary");
 
         MenuPan = MenuBoard.GetComponent<Image>();
-        //MaryControl = MaryControl.GetComponent<Controll>();
-
+        MenuPan.gameObject.SetActive(false);
         activiated = false;
        
     }
@@ -39,11 +37,11 @@ public class Menu : MonoBehaviour
     {
         activiated = true;
         MenuButton.SetActive(false);
-       // MaryControl.gameObject.SetActive(false);
-        
         MenuBoard.SetActive(true);
         MenuPan.gameObject.SetActive(activiated);
-        Mary.GetComponent<Controll>().speed = 0;
+       // Mary.GetComponent<Controll>().gameObject.SetActive(false);
+       
+        Mary.GetComponent<Controll>().menuON = false;
     }
 
     public void MenuOFF()
@@ -53,9 +51,10 @@ public class Menu : MonoBehaviour
       
           Debug.Log(MenuButton.activeSelf);
           MenuPan.gameObject.SetActive(activiated);
+     
+    //     Mary.GetComponent<Controll>().gameObject.SetActive(true);
 
-        Mary.GetComponent<Controll>().speed = 8;
-
+        Mary.GetComponent<Controll>().menuON = true;
         MenuBoard.SetActive(false);
     }
 
@@ -68,6 +67,10 @@ public class Menu : MonoBehaviour
     public void MoveToRoom()
     {
         SceneManager.LoadScene("MaryRoom");
+
+
+        //Mary.GetComponent<Controll>().gameObject.SetActive(true);
+        Mary.GetComponent<Controll>().menuON = true;
         Mary.GetComponent<Transform>().position = roomVector;
     }
 
