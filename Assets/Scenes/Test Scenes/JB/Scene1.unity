@@ -203,7 +203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104448871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 840ca430e9ac6264eacd41b01df3615d, type: 3}
   m_Name: 
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104448871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07cc1b3487ccfdc46b4c68a68c6bff3e, type: 3}
   m_Name: 
@@ -228,6 +228,7 @@ MonoBehaviour:
   adjustY: 0
   moveSpeed: 20
   bound: {fileID: 294598916}
+  getCamera: {fileID: 0}
 --- !u!1 &173766944
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +330,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1126001375
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 374b9bf3b61d94b9e9bcbd69ad60026f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -339,7 +340,7 @@ SpriteRenderer:
   m_Size: {x: 2.4, y: 2.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &173766948
@@ -706,6 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtFile: item
+  itemText: {fileID: 611174510}
 --- !u!114 &611174513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,8 +733,8 @@ MonoBehaviour:
     m_FontSize: 20
     m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 200
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -849,7 +851,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1126001375
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 290fdc4356b9d448c96a1634bf5ef332, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -859,7 +861,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &745154169
@@ -1230,6 +1232,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 670072313
       objectReference: {fileID: 0}
+    - target: {fileID: 700237067483708576, guid: 07cb84f4bf6fcb24a8124e905f2e2071,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07cb84f4bf6fcb24a8124e905f2e2071, type: 3}
 --- !u!1001 &6542327848222080621
@@ -1493,11 +1500,6 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7889691863593573343, guid: 746c28a2a8860d4459d15859c0d936f9,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8013437081200219953, guid: 746c28a2a8860d4459d15859c0d936f9,
         type: 3}
       propertyPath: speed
@@ -1506,17 +1508,7 @@ PrefabInstance:
     - target: {fileID: 8013437081200219953, guid: 746c28a2a8860d4459d15859c0d936f9,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5412503852052591976, guid: 746c28a2a8860d4459d15859c0d936f9,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5412503852052591976, guid: 746c28a2a8860d4459d15859c0d936f9,
-        type: 3}
-      propertyPath: moveit
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8437957459866376714, guid: 746c28a2a8860d4459d15859c0d936f9,
         type: 3}
@@ -1536,7 +1528,22 @@ PrefabInstance:
     - target: {fileID: 8437957459866376714, guid: 746c28a2a8860d4459d15859c0d936f9,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889691863593573343, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412503852052591976, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412503852052591976, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: moveit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746c28a2a8860d4459d15859c0d936f9, type: 3}

@@ -1,10 +1,7 @@
-﻿itemCode,explanation
-apple,사과
-key,???의 열쇠
-paper,종이
-pen,펜
-book,책
-Son,손찬우
-Song,송진범
-Sirius,먹부림학회
-blueScreen,오열
+﻿itemCode,name,explanation
+apple,사과,맛이 있어 보이는 사과이다.
+key,???의 열쇠,어디에 쓰일지 모르는 열쇠이다. 상당히 낡아 보인다.
+paper,종이,아무것도 쓰여있지 않은 빈 종이이다.
+pen,펜,평범한 펜이다. 잉크가 많아 보이지는 않는다.
+book,책,책이다.
+mushroom,버섯,버섯이다

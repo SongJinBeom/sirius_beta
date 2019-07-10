@@ -52,6 +52,9 @@ TagManager:
   - name: Character
     uniqueID: 3994275039
     locked: 0
+  - name: item
+    uniqueID: 3800455321
+    locked: 0
   - name: Interactoin
     uniqueID: 3168965921
     locked: 0
